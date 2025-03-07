@@ -7,41 +7,47 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
+    padding: 20px;
 }
 
 .container {
     background: rgba(255, 255, 255, 0.8);
-    padding: 40px;
+    padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 2rem; /* Tamanho menor para celulares */
+    margin-bottom: 15px;
     color: #5a3e36;
 }
 
 p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1rem; /* Tamanho menor para celulares */
+    margin-bottom: 20px;
 }
 
 .timer {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px; /* Espaçamento menor para celulares */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas pequenas */
 }
 
 .time-box {
     background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 100px;
+    width: 80px; /* Largura menor para celulares */
+    margin: 5px; /* Espaçamento entre os itens */
 }
 
 .time-box span {
@@ -49,20 +55,53 @@ p {
 }
 
 #days, #hours, #minutes, #seconds {
-    font-size: 2.5rem;
+    font-size: 1.8rem; /* Tamanho menor para celulares */
     font-weight: bold;
     color: #5a3e36;
 }
 
 .label {
-    font-size: 1rem;
+    font-size: 0.9rem; /* Tamanho menor para celulares */
     color: #7a5a50;
     margin-top: 5px;
 }
 
 .message {
-    margin-top: 30px;
-    font-size: 1.5rem;
+    margin-top: 20px;
+    font-size: 1.2rem; /* Tamanho menor para celulares */
     color: #5a3e36;
     font-style: italic;
+}
+
+/* Ajustes para telas maiores (tablets e desktops) */
+@media (min-width: 768px) {
+    .container {
+        padding: 40px;
+        max-width: 600px; /* Limita a largura máxima para telas maiores */
+    }
+
+    h1 {
+        font-size: 3rem; /* Tamanho maior para tablets e desktops */
+    }
+
+    p {
+        font-size: 1.2rem; /* Tamanho maior para tablets e desktops */
+    }
+
+    .time-box {
+        width: 100px; /* Largura maior para tablets e desktops */
+        padding: 20px;
+    }
+
+    #days, #hours, #minutes, #seconds {
+        font-size: 2.5rem; /* Tamanho maior para tablets e desktops */
+    }
+
+    .label {
+        font-size: 1rem; /* Tamanho maior para tablets e desktops */
+    }
+
+    .message {
+        font-size: 1.5rem; /* Tamanho maior para tablets e desktops */
+    }
 }

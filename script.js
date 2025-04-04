@@ -1,5 +1,5 @@
 // Defina a data em que começaram a namorar (ano, mês-1, dia, hora, minuto, segundo)
-const startDate = new Date(2023, 12, 2, 20, 0, 0); // Exemplo: 1º de outubro de 2023, 12:00:00
+const startDate = new Date(2023, 11, 2, 20, 0, 0); // Exemplo: 1º de outubro de 2023, 12:00:00
 
 function updateTimer() {
     const now = new Date();
